@@ -123,7 +123,7 @@ fig.text(0.04, 0.5, "Price", va='center', rotation='vertical')
 plt.tight_layout(rect=[0.03, 0.03, 1, 0.95])
 plt.show()
 
-us_info = train_info[train_info["Category"] == "US Stock" & train_info["Type"] == "adjusted close"]
+us_info = train_info[(train_info["Category"] == "US Stock") & (train_info["Type"] == "adjusted close")]
 us_tkr = us_info["Ticker"].tolist()
 
 colums =[0] + jpx_iinfo["Column_Id"].tolist()
